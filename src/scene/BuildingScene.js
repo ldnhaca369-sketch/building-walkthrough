@@ -59,11 +59,16 @@ export class BuildingScene {
   }
 
   _resolveCategory(name = '') {
-    const layers = this.meta.layers || {};
     const upper = name.toUpperCase();
+    const layers = this.meta.layers || {};
     for (const [prefix, category] of Object.entries(layers)) {
       if (upper.startsWith(prefix)) return category;
     }
+    // Dự phòng: nhận diện theo từ khóa trong tên, ví dụ L1_Wall_North
+    if (upper.includes('WALL')) return 'wall';
+    if (upper.includes('DOOR')) return 'door';
+    if (upper.includes('FLOOR') || upper.includes('FLOR')) return 'floor';
+    if (upper.includes('ROOF')) return 'roof';
     return 'other';
   }
 
