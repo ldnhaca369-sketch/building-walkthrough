@@ -1,0 +1,7 @@
+{
+  "floors": [
+    { "id": "L1", "name": "Tầng 1", "elevation": 0.0, "height": 3.6 },
+    { "id": "L2", "name": "Tầng 2", "elevation": 3.6, "height": 3.6 }
+  ],
+  "layers": { "A-WALL": "wall", "A-DOOR": "door", "A-FLOR": "floor", "A-ROOF": "roof" }
+}
