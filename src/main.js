@@ -32,9 +32,6 @@ async function init() {
   );
 
   const building = new BuildingScene(engine.scene, gltf, meta);
-  document.getElementById('hint').textContent =
-  'Số tường nhận diện: ' + building.colliders.length + ' | ' +
-  building.colliders.slice(0, 3).map((m) => m.name).join(', ');
   const controllers = new ControllerManager({
     engine,
     building,
