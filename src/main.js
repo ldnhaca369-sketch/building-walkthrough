@@ -32,6 +32,8 @@ async function init() {
   );
 
   const building = new BuildingScene(engine.scene, gltf, meta);
+  console.log('Số tường/cửa nhận diện:', building.colliders.length);
+  console.log('Tên các khối:', building.colliders.map((m) => m.name));
   const controllers = new ControllerManager({
     engine,
     building,
