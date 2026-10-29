@@ -71,7 +71,7 @@ export class BuildingScene {
     if (upper.includes('ROOF')) return 'roof';
     return 'other';
   }
-
+  
   /** Chỉ hiển thị một tầng (chế độ cắt tầng). */
   showFloor(floorId) {
     for (const [id, group] of this.floors) {
